@@ -611,8 +611,8 @@ public class Mobile
 		return 0;
 	}
 
-	public int lastid = 0;
-	public int getkeyid() {
+	public static int lastid = 0;
+	public static int getkeyid() {
 		lastid = lastid + 1;
 		Mobile.log(Mobile.LOG_DEBUG,"id:" + lastid);
 		return lastid;
