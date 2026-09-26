@@ -254,7 +254,7 @@ public class Mobile
 	public static final int BLACKBERRY70_RIGHT = 5;
 	public static final int BLACKBERRY70_SOFT1 = 113;
 	public static final int BLACKBERRY70_SOFT2 = 112;
-	public static final int BLACKBERRY70_FIRE = 32;
+	public static final int BLACKBERRY70_FIRE = 10;
 	public static final int BLACKBERRY70_CLR = -88;
 	public static final int BLACKBERRY70_NUM5  = 8;
 	
@@ -639,7 +639,7 @@ public class Mobile
 				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.GAME_A;
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
-				case 8:  return Canvas.KEY_NUM5;
+				case 13:  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
@@ -822,7 +822,7 @@ public class Mobile
 				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.KEY_SOFT_LEFT; // Start   (gameAction is GAME_A, but we go with the special keys for CanvasAction)
 				case BLACKBERRY70_SOFT2: return Canvas.KEY_SOFT_RIGHT; // Select (gameAction is GAME_B, but we go with the special keys for CanvasAction)
-				case 8:  return Canvas.KEY_NUM5;
+				case 13:  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
