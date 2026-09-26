@@ -303,6 +303,7 @@ public class RecordStore
 
 	public void deleteRecord(int recordId) throws RecordStoreException, SecurityException
 	{
+		recordId = Math.abs(recordId);
 		if(!recordStoreIsOpen) { throw new RecordStoreNotOpenException("Cannot add record, as Record Store is not open"); }
 		if(!Mobile.getPlatform().loader.suitename.equals(this.suitename) && !writablebyothers) { throw new SecurityException("This suite does not have write access to this RecordStore"); }
 		version++;
