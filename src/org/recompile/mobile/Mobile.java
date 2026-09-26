@@ -622,6 +622,7 @@ public class Mobile
 	public static final int getGameAction(int keycode)
 	{
 		getkeyid();
+		final int keyid = lastid;
 		// NOTE: Canvas doesn't support SOFT keys by default. Those cases are all returning NOKIA softkeys to abstract lcdui's menu navigation
 		if (blackberry89)
 		{
@@ -647,7 +648,7 @@ public class Mobile
 				//case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.GAME_A;
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
-				case lastid:  return Canvas.FIRE;
+				case keyid:  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
@@ -805,6 +806,7 @@ public class Mobile
 	// The difference between this and getGameAction is that the num keys and arrow keys are separated here.
 	public static final int getCanvasAction(int keycode)
 	{
+		final int keyid = lastid;
 		// NOTE: Canvas doesn't support SOFT keys by default. Those cases are all returning NOKIA softkeys to abstract lcdui's menu navigation
 		if (blackberry89)
 		{
@@ -830,7 +832,7 @@ public class Mobile
 				//case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.KEY_SOFT_LEFT; // Start   (gameAction is GAME_A, but we go with the special keys for CanvasAction)
 				case BLACKBERRY70_SOFT2: return Canvas.KEY_SOFT_RIGHT; // Select (gameAction is GAME_B, but we go with the special keys for CanvasAction)
-				case lastid:  return Canvas.FIRE;
+				case keyid:  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
