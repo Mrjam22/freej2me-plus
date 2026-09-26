@@ -433,7 +433,6 @@ public class Mobile
 				case 7:  return BLACKBERRY70_FIRE; // Y
 				case 8:  return BLACKBERRY70_SOFT2; // Start
 				case 9:  return BLACKBERRY70_SOFT1; // Select
-				case 10:  return BLACKBERRY70_NUM5;
 				case 19: return BLACKBERRY70_CLR;
 			}
 		}
@@ -637,10 +636,9 @@ public class Mobile
 				case BLACKBERRY70_DOWN:  return Canvas.DOWN; // Down
 				case BLACKBERRY70_LEFT:  return Canvas.LEFT; // Left
 				case BLACKBERRY70_RIGHT: return Canvas.RIGHT; // Right
-				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
+				case BLACKBERRY70_FIRE:  return Canvas.KEY_NUM5; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.GAME_A;
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
-				case BLACKBERRY70_NUM5: return 	Canvas.KEY_NUM5;
 			}
 		}
 		if (kddi)
@@ -820,10 +818,9 @@ public class Mobile
 				case BLACKBERRY70_DOWN:  return Canvas.DOWN; // Down
 				case BLACKBERRY70_LEFT:  return Canvas.LEFT; // Left
 				case BLACKBERRY70_RIGHT: return Canvas.RIGHT; // Right
-				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
+				case BLACKBERRY70_FIRE:  return Canvas.KEY_NUM5; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.KEY_SOFT_LEFT; // Start   (gameAction is GAME_A, but we go with the special keys for CanvasAction)
 				case BLACKBERRY70_SOFT2: return Canvas.KEY_SOFT_RIGHT; // Select (gameAction is GAME_B, but we go with the special keys for CanvasAction)
-			    case BLACKBERRY70_NUM5:  return Canvas.KEY_NUM5;
 			}
 		}
 		if (kddi)
