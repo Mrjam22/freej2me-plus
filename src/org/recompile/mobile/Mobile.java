@@ -648,7 +648,7 @@ public class Mobile
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
 				//case keyid:  return Canvas.FIRE;
 			}
-			if(keycode == lastid){
+			if(getkeyid() == lastid){
 				getkeyid();
 				return Canvas.FIRE;
 			}
