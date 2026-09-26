@@ -649,7 +649,6 @@ public class Mobile
 				//case keyid:  return Canvas.FIRE;
 			}
 			if(getkeyid() == lastid){
-				getkeyid();
 				return Canvas.FIRE;
 			}
 		}
