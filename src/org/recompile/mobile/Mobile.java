@@ -636,7 +636,7 @@ public class Mobile
 				case BLACKBERRY70_DOWN:  return Canvas.DOWN; // Down
 				case BLACKBERRY70_LEFT:  return Canvas.LEFT; // Left
 				case BLACKBERRY70_RIGHT: return Canvas.RIGHT; // Right
-				case BLACKBERRY70_FIRE:  return Canvas.KEY_NUM5; // Y
+				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.GAME_A;
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
 			}
@@ -818,7 +818,7 @@ public class Mobile
 				case BLACKBERRY70_DOWN:  return Canvas.DOWN; // Down
 				case BLACKBERRY70_LEFT:  return Canvas.LEFT; // Left
 				case BLACKBERRY70_RIGHT: return Canvas.RIGHT; // Right
-				case BLACKBERRY70_FIRE:  return Canvas.KEY_NUM5; // Y
+				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.KEY_SOFT_LEFT; // Start   (gameAction is GAME_A, but we go with the special keys for CanvasAction)
 				case BLACKBERRY70_SOFT2: return Canvas.KEY_SOFT_RIGHT; // Select (gameAction is GAME_B, but we go with the special keys for CanvasAction)
 			}
