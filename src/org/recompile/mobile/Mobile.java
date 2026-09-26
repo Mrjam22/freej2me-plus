@@ -650,7 +650,7 @@ public class Mobile
 				//case keyid:  return Canvas.FIRE;
 			}
 			if(keycode == lastid){
-				return Canvas.FIRE
+				return Canvas.FIRE;
 			}
 		}
 		if (kddi)
@@ -837,7 +837,7 @@ public class Mobile
 				// case keyid:  return Canvas.FIRE;
 			}
 			if(keycode == lastid){
-				return Canvas.FIRE
+				return Canvas.FIRE;
 			}
 		}
 		if (kddi)
