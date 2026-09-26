@@ -254,7 +254,7 @@ public class Mobile
 	public static final int BLACKBERRY70_RIGHT = 5;
 	public static final int BLACKBERRY70_SOFT1 = 113;
 	public static final int BLACKBERRY70_SOFT2 = 112;
-	public static final int BLACKBERRY70_FIRE = 8;
+	public static final int BLACKBERRY70_FIRE = 16;
 	public static final int BLACKBERRY70_CLR = -88;
 	public static final int BLACKBERRY70_NUM5  = 8;
 	
