@@ -622,7 +622,7 @@ public class Mobile
 	public static final int getGameAction(int keycode)
 	{
 		getkeyid();
-		final int keyid = lastid;
+		static final int keyid = lastid;
 		// NOTE: Canvas doesn't support SOFT keys by default. Those cases are all returning NOKIA softkeys to abstract lcdui's menu navigation
 		if (blackberry89)
 		{
@@ -806,7 +806,7 @@ public class Mobile
 	// The difference between this and getGameAction is that the num keys and arrow keys are separated here.
 	public static final int getCanvasAction(int keycode)
 	{
-		final int keyid = lastid;
+		static final int keyid = lastid;
 		// NOTE: Canvas doesn't support SOFT keys by default. Those cases are all returning NOKIA softkeys to abstract lcdui's menu navigation
 		if (blackberry89)
 		{
