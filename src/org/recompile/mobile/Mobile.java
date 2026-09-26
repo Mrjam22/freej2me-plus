@@ -621,6 +621,7 @@ public class Mobile
 	// This is just for a correct handling of Canvas.getGameAction(), though it didn't fix some siemens jars that still get stuck in the LCDUI menu
 	public static final int getGameAction(int keycode)
 	{
+		getkeyid();
 		// NOTE: Canvas doesn't support SOFT keys by default. Those cases are all returning NOKIA softkeys to abstract lcdui's menu navigation
 		if (blackberry89)
 		{
@@ -646,7 +647,7 @@ public class Mobile
 				//case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.GAME_A;
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
-				case getkeyid():  return Canvas.FIRE;
+				case lastid:  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
@@ -829,7 +830,7 @@ public class Mobile
 				//case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.KEY_SOFT_LEFT; // Start   (gameAction is GAME_A, but we go with the special keys for CanvasAction)
 				case BLACKBERRY70_SOFT2: return Canvas.KEY_SOFT_RIGHT; // Select (gameAction is GAME_B, but we go with the special keys for CanvasAction)
-				case getkeyid():  return Canvas.FIRE;
+				case lastid:  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
