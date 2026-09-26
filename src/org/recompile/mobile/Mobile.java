@@ -611,6 +611,13 @@ public class Mobile
 		return 0;
 	}
 
+	public int lastid = 0;
+	public int getkeyid() {
+		lastid = lastid + 1;
+		Mobile.log(Mobile.LOG_DEBUG,"id:" + lastid);
+		return lastid;
+	}
+
 	// This is just for a correct handling of Canvas.getGameAction(), though it didn't fix some siemens jars that still get stuck in the LCDUI menu
 	public static final int getGameAction(int keycode)
 	{
@@ -636,10 +643,10 @@ public class Mobile
 				case BLACKBERRY70_DOWN:  return Canvas.DOWN; // Down
 				case BLACKBERRY70_LEFT:  return Canvas.LEFT; // Left
 				case BLACKBERRY70_RIGHT: return Canvas.RIGHT; // Right
-				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
+				//case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.GAME_A;
 				case BLACKBERRY70_SOFT2: return Canvas.GAME_B;
-				case 13:  return Canvas.FIRE;
+				case getkeyid():  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
@@ -819,10 +826,10 @@ public class Mobile
 				case BLACKBERRY70_DOWN:  return Canvas.DOWN; // Down
 				case BLACKBERRY70_LEFT:  return Canvas.LEFT; // Left
 				case BLACKBERRY70_RIGHT: return Canvas.RIGHT; // Right
-				case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
+				//case BLACKBERRY70_FIRE:  return Canvas.FIRE; // Y
 				case BLACKBERRY70_SOFT1: return Canvas.KEY_SOFT_LEFT; // Start   (gameAction is GAME_A, but we go with the special keys for CanvasAction)
 				case BLACKBERRY70_SOFT2: return Canvas.KEY_SOFT_RIGHT; // Select (gameAction is GAME_B, but we go with the special keys for CanvasAction)
-				case 13:  return Canvas.FIRE;
+				case getkeyid():  return Canvas.FIRE;
 			}
 		}
 		if (kddi)
